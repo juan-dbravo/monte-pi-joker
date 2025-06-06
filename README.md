@@ -75,15 +75,19 @@ python main.py
 chmod +x run.sh
 ./run.sh
 ```
+## ▶️ Quickstart for Reviewers (GitHub Codespaces)
 
-## ▶️ Quickstart for Reviewers
+This project runs end-to-end inside GitHub Codespaces — no local setup required.
 
-# 🧪 Run This Mini-Pipeline in GitHub Codespaces
+It demonstrates:
+- Monte Carlo simulation of π (pi)
+- Data analysis with Pandas
+- Upload to AWS S3
+- Docker compatibility
 
-# This project is fully runnable inside GitHub Codespaces with no local installation required.
-# It demonstrates a Monte Carlo simulation of π (pi), data storage using Pandas, 
-# and cloud integration with AWS S3 — all inside a Dockerized environment.
+### 🔧 Instructions
 
+```bash
 # ✅ STEP 1: Launch Codespace
 # - Click the green “Code” button on this repository
 # - Open a Codespace from the “Codespaces” tab
@@ -96,10 +100,8 @@ ls
 pip install -r requirements.txt
 
 # ✅ STEP 4: Add AWS credentials to `.env`
-# Create and edit a .env file in the root directory:
 touch .env
-
-# Paste the following (replace with real AWS credentials or use test credentials if provided):
+# Paste the following into the file:
 AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_DEFAULT_REGION=your-region
@@ -108,20 +110,16 @@ S3_BUCKET_NAME=your-s3-bucket-name
 # ✅ STEP 5: Run the pipeline
 python main.py
 
-# Output:
-# 🎯 Estimating π the Joker way...
-# 🎲 Estimated π ≈ 3.14...
-# ✅ Uploaded results.csv to s3://your-bucket/monte_pi/results.csv
-
-# 🐳 BONUS: Run it via Docker
+# ✅ STEP 6 (Optional): Run it via Docker
 chmod +x run.sh
 ./run.sh
-
-## 🖼️ Example Output
-
-- CSV file: 10,000 dart throws, circle test, and π estimate
-- ✅ Uploaded to: `s3://your-bucket/monte_pi/results.csv`
+```
 
 ---
 
+## 🖼️ Example Output
 
+- CSV file: 10,000 dart throws, circle test, and π estimate  
+- ✅ Uploaded to: `s3://your-bucket/monte_pi/results.csv`
+
+---

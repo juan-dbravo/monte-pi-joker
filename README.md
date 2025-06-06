@@ -1,4 +1,4 @@
-```markdown
+
 # 🃏 Monte Pi Joker
 
 Estimate π (pi) the clowny way using a Monte Carlo simulation!  
@@ -75,14 +75,51 @@ python main.py
 chmod +x run.sh
 ./run.sh
 ```
+## ▶️ Quickstart for Reviewers (GitHub Codespaces)
+
+This project runs end-to-end inside GitHub Codespaces — no local setup required.
+
+It demonstrates:
+- Monte Carlo simulation of π (pi)
+- Data analysis with Pandas
+- Upload to AWS S3
+- Docker compatibility
+
+### 🔧 Instructions
+
+```bash
+# ✅ STEP 1: Launch Codespace
+# - Click the green “Code” button on this repository
+# - Open a Codespace from the “Codespaces” tab
+
+# ✅ STEP 2: Confirm you're in the project directory
+ls
+# You should see: main.py, requirements.txt, run.sh, etc.
+
+# ✅ STEP 3: Install Python dependencies
+pip install -r requirements.txt
+
+# ✅ STEP 4: Add AWS credentials to `.env`
+touch .env
+# Paste the following into the file:
+AWS_ACCESS_KEY_ID=your-access-key
+AWS_SECRET_ACCESS_KEY=your-secret-key
+AWS_DEFAULT_REGION=your-region
+S3_BUCKET_NAME=your-s3-bucket-name
+
+# ✅ STEP 5: Run the pipeline
+python main.py
+
+# ✅ STEP 6 (Optional): Run it via Docker
+chmod +x run.sh
+./run.sh
+```
 
 ---
 
 ## 🖼️ Example Output
 
-- CSV file: 10,000 dart throws, circle test, and π estimate
+- CSV file: 10,000 dart throws, circle test, and π estimate  
 - ✅ Uploaded to: `s3://your-bucket/monte_pi/results.csv`
 
 ---
-
-
